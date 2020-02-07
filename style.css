@@ -54,7 +54,7 @@ a:hover{
     
 }
 
-section{
+.section{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-gap: 20px;
@@ -62,17 +62,18 @@ section{
     border-bottom: 1px solid lightgray;
 }
 
-section:first-child{
+.section:first-child{
     grid-template-columns: 1fr;
 }
 
-section:last-child{
+.section:last-child{
     border-bottom: none;
 }
 
 .section-title{
     font-weight: bold;
     font-size: 18px;
+    border-right: 1px solid lightgray;
 }
 
 img.avatar{
@@ -160,8 +161,32 @@ img.avatar{
     font-size: 18px;
 }
 
+/*Pour les téléphones*/
+@media screen and (max-width: 578px){
+    body{
+     background-color: rgb(95, 95, 134);
+    }
+   
+    .container{
+       max-width: 87%;
+       margin: 2% auto;
+   
+    }
 
-@media only screen and (max-width: 768px){
+    .section-title{
+        border-right: none;
+    }
+
+   }
+
+/*Pour les tablettes*/
+@media screen and (max-width: 768px){
+
+    .container{
+        max-width: 85%;
+        margin: 2% auto;
+    
+     }
     section{
         grid-template-columns: 1fr;
     }
@@ -193,7 +218,4 @@ img.avatar{
         margin-bottom: 1%;
     }
 
-    body{
-        margin: 0%;
-    }
 }
