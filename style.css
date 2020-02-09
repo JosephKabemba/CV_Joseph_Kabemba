@@ -24,7 +24,6 @@ img{
 }
 
 .icon{
-    fill: currentColor;
     display: inline-block;
     font-size: inherit;
     height: 1.2em;
@@ -163,8 +162,9 @@ img.avatar{
 
 /*Pour les téléphones*/
 @media screen and (max-width: 578px){
+
     body{
-     background-color: rgb(95, 95, 134);
+     text-align: justify;
     }
    
     .container{
@@ -174,8 +174,21 @@ img.avatar{
     }
 
     .section-title{
+        text-transform: uppercase;
         border-right: none;
     }
+
+    .section{
+        grid-template-columns: 1fr;
+        border-bottom: 1px solid black;
+    }
+
+    .job{
+        border-bottom: 1px dashed lightgray;
+        margin-left: 3%;
+    }
+
+
 
    }
 
@@ -183,7 +196,7 @@ img.avatar{
 @media screen and (max-width: 768px){
 
     .container{
-        max-width: 85%;
+        max-width: 90%;
         margin: 2% auto;
     
      }
@@ -212,10 +225,22 @@ img.avatar{
     img.avatar{
         width: 40%;
         height: 85%;
+        margin-left: 30%;
     }
 
     .job{
         margin-bottom: 1%;
+    }
+
+    .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 10%;
+    }
+
+    #reflinks{
+        margin-left: 0%;
+        
     }
 
 }
